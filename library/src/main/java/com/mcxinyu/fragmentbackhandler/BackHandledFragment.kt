@@ -17,7 +17,7 @@ package com.mcxinyu.fragmentbackhandler
 
 import androidx.fragment.app.Fragment
 
-abstract class BackHandledFragment : Fragment(), FragmentBackHandler {
+abstract class BackHandledFragment : Fragment(), BackHandlerCallbacks {
     override fun onBackPressed(): Boolean {
         return interceptBackPressed() || BackHandlerHelper.handleBackPress(this)
     }

@@ -19,7 +19,7 @@ import androidx.fragment.app.*
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 
-public interface FragmentBackHandler {
+public interface BackHandlerCallbacks {
     fun onBackPressed(): Boolean
 }
 
@@ -96,7 +96,7 @@ object BackHandlerHelper {
     fun isFragmentBackHandled(fragment: Fragment?): Boolean {
         return (fragment != null && fragment.isVisible
                 && fragment.userVisibleHint //for ViewPager
-                && fragment is FragmentBackHandler
-                && (fragment as FragmentBackHandler).onBackPressed())
+                && fragment is BackHandlerCallbacks
+                && (fragment as BackHandlerCallbacks).onBackPressed())
     }
 }
