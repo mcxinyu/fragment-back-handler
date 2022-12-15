@@ -1,3 +1,6 @@
+## 已经弃用，可以采用 AndroidX 的 [androidx.activity.OnBackPressedCallback] 替代
+## It has been discarded and can be replaced by [androidx. activity. OnBackPressedCallback] of AndroidX
+
 # FragmentBackHandler
 
 [![](https://jitpack.io/v/mcxinyu/fragment-back-handler.svg)](https://jitpack.io/#mcxinyu/fragment-back-handler)
